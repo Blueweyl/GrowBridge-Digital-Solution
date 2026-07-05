@@ -12,7 +12,7 @@ export function Experience() {
         <Reveal direction="up" className="text-center mb-14">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Background</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display">
-            Professional <span className="gradient-text">Journey</span>
+            Our <span className="gradient-text">Journey</span>
           </h2>
         </Reveal>
 
@@ -38,7 +38,7 @@ export function Experience() {
         </div>
 
         <Reveal direction="up" delay={200} className="mt-16 text-center">
-          <p className="text-sm text-muted-foreground mb-6 uppercase tracking-widest">Tools I'm Expert In</p>
+          <p className="text-sm text-muted-foreground mb-6 uppercase tracking-widest">Tools We're Expert In</p>
           <div className="flex flex-wrap justify-center gap-6">
             {expertTools.map((tool) => (
               <div key={tool.name} className="flex flex-col items-center gap-2 w-16">

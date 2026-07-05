@@ -5,19 +5,20 @@ export interface ExperienceItem {
   iconColor: "primary" | "accent";
 }
 
+// TODO: replace with GrowBridge Digital Solutions' real milestones/dates.
 export const experience: ExperienceItem[] = [
   {
-    title: "Automation & Systems VA",
+    title: "Founded GrowBridge Digital Solutions",
     date: "2025 – Present",
     description:
-      "Freelance AI Automation Specialist building end-to-end workflow solutions for businesses worldwide. Specializing in GoHighLevel, n8n, Zapier, and AI integration to eliminate manual processes and drive measurable growth.",
+      "Built as an AI automation agency delivering end-to-end workflow solutions for businesses worldwide. Specializing in GoHighLevel, n8n, Zapier, and AI integration to eliminate manual processes and drive measurable growth.",
     iconColor: "accent",
   },
   {
-    title: "Leadership Role — ROHM Philippines",
-    date: "Previous",
+    title: "Expanded Client Roster",
+    date: "Ongoing",
     description:
-      "Demonstrated leadership in a high-performance manufacturing environment. Developed operational efficiencies and team coordination skills that now inform my systematic approach to automation architecture.",
+      "Grew from early pilot clients to a diverse portfolio spanning marketing agencies, SaaS startups, finance, and real estate — refining a systematic approach to automation architecture along the way.",
     iconColor: "primary",
   },
 ];

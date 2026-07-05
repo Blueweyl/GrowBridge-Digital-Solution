@@ -1,4 +1,4 @@
-import { Linkedin, Mail, Globe, ExternalLink, Briefcase } from "lucide-react";
+import { Mail, Globe, ExternalLink, Briefcase } from "lucide-react";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { Reveal } from "./Reveal";
 
@@ -28,12 +28,12 @@ export function Footer() {
                 <div className="flex items-center gap-3 mb-4">
                   <ImageWithFallback
                     src="/images/profile/logo-vf.png"
-                    alt="VF Logo"
+                    alt="GrowBridge Digital Solutions logo"
                     className="w-10 h-10 rounded-lg object-cover"
                   />
                   <div>
-                    <p className="font-display font-bold text-lg">VinzTechy</p>
-                    <p className="text-xs text-muted-foreground">AI Automation Specialist</p>
+                    <p className="font-display font-bold text-lg">GrowBridge Digital Solutions</p>
+                    <p className="text-xs text-muted-foreground">AI Automation Agency</p>
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
@@ -84,24 +84,13 @@ export function Footer() {
                 </p>
                 <div className="space-y-3">
                   <a
-                    href="https://www.linkedin.com/in/vincentdelaraautomation"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors group"
-                  >
-                    <div className="p-2 rounded-lg bg-secondary border border-border/50 group-hover:border-primary/30 transition-colors">
-                      <Linkedin className="w-4 h-4" />
-                    </div>
-                    LinkedIn
-                  </a>
-                  <a
-                    href="mailto:techvavdf@gmail.com"
+                    href="mailto:contact@growbridgedigital.com"
                     className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors group"
                   >
                     <div className="p-2 rounded-lg bg-secondary border border-border/50 group-hover:border-primary/30 transition-colors">
                       <Mail className="w-4 h-4" />
                     </div>
-                    techvavdf@gmail.com
+                    contact@growbridgedigital.com
                   </a>
                   <button
                     onClick={() => scrollTo("projects")}
@@ -119,7 +108,7 @@ export function Footer() {
 
           <div className="border-t border-border/30 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-muted-foreground">
-              © {new Date().getFullYear()} Vincent Fitalvero. All rights reserved.
+              © {new Date().getFullYear()} GrowBridge Digital Solutions. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground">Built with precision · Powered by automation</p>
           </div>

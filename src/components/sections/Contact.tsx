@@ -1,10 +1,7 @@
 import { Sparkles, ArrowRight } from "lucide-react";
 import { Reveal } from "../Reveal";
-import { useCalendly } from "../../lib/useCalendly";
 
 export function Contact() {
-  const bookCall = useCalendly();
-
   return (
     <section className="px-6 py-24 relative overflow-hidden">
       <div className="relative max-w-4xl mx-auto">
@@ -37,22 +34,22 @@ export function Contact() {
               Ready to <span className="gradient-text">Automate</span> Your Business?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-              Book a free 30-minute automation audit. I'll show you exactly which workflows to
+              Book a free 30-minute automation audit. We'll show you exactly which workflows to
               automate first for maximum ROI — no obligation, just actionable insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={bookCall}
+              <a
+                href="mailto:contact@growbridgedigital.com"
                 className="inline-flex items-center justify-center text-lg px-10 py-7 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-semibold"
               >
                 Book Your Free Audit
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
+              </a>
               <a
-                href="mailto:techvavdf@gmail.com"
+                href="mailto:contact@growbridgedigital.com"
                 className="inline-flex items-center justify-center text-base px-8 py-7 rounded-xl border border-border hover:border-primary/60 hover:bg-primary/5 transition-colors font-semibold"
               >
-                Or Email Me Directly
+                Or Email Us Directly
               </a>
             </div>
             <p className="text-xs text-muted-foreground mt-6">

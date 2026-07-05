@@ -36,10 +36,10 @@ export function Navbar() {
         <button onClick={() => scrollTo("hero")} className="flex items-center gap-2 shrink-0">
           <ImageWithFallback
             src="/images/profile/logo-vf.png"
-            alt="Vincent Fitalvero logo"
+            alt="GrowBridge Digital Solutions logo"
             className="w-8 h-8 rounded-md object-cover"
           />
-          <span className="font-display font-semibold text-sm hidden sm:inline">Vincent Fitalvero</span>
+          <span className="font-display font-semibold text-sm hidden sm:inline">GrowBridge Digital Solutions</span>
         </button>
 
         <div className="hidden md:flex items-center gap-8">

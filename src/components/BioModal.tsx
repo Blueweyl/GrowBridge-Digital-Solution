@@ -1,13 +1,12 @@
-import { X, Phone } from "lucide-react";
+import { X } from "lucide-react";
 import { ImageWithFallback } from "./ImageWithFallback";
 
 interface BioModalProps {
   open: boolean;
   onClose: () => void;
-  onBookCall: () => void;
 }
 
-export function BioModal({ open, onClose, onBookCall }: BioModalProps) {
+export function BioModal({ open, onClose }: BioModalProps) {
   if (!open) return null;
 
   return (
@@ -28,34 +27,25 @@ export function BioModal({ open, onClose, onBookCall }: BioModalProps) {
         </button>
 
         <ImageWithFallback
-          src="/images/profile/profile-photo.jpg"
-          alt="Vincent De Lara Fitalvero"
+          src="/images/profile/logo-vf.png"
+          alt="GrowBridge Digital Solutions"
           className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-primary/40"
         />
 
-        <h3 className="font-display font-bold text-lg mb-1">Vincent De Lara Fitalvero</h3>
-        <p className="text-primary text-sm font-medium mb-4">AI Automation Specialist & GoHighLevel Expert</p>
+        <h3 className="font-display font-bold text-lg mb-1">GrowBridge Digital Solutions</h3>
+        <p className="text-primary text-sm font-medium mb-4">AI Automation Agency & GoHighLevel Experts</p>
         <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-          I help businesses save time and scale faster by building AI-powered automation workflows.
+          We help businesses save time and scale faster by building AI-powered automation workflows.
           Specialized in GoHighLevel, n8n, Zapier, and Make.com — turning complex processes into
           seamless systems.
         </p>
 
         <div className="flex justify-center gap-3">
-          <button
-            onClick={() => {
-              onClose();
-              onBookCall();
-            }}
+          <a
+            href="mailto:contact@growbridgedigital.com"
             className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
           >
-            <Phone className="w-4 h-4" /> Book a Call
-          </button>
-          <a
-            href="mailto:techvavdf@gmail.com"
-            className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg border border-border hover:border-primary/60 transition-colors"
-          >
-            Email Me
+            Email Us
           </a>
         </div>
       </div>

@@ -1,6 +1,6 @@
-# Vincent Fitalvero — AI Automation Specialist Portfolio
+# GrowBridge Digital Solutions
 
-A portfolio site built with React, TypeScript, Vite, and Tailwind CSS.
+An AI automation agency site built with React, TypeScript, Vite, and Tailwind CSS.
 
 ## Development
 
