@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Reveal } from "../Reveal";
 import { ImageWithFallback } from "../ImageWithFallback";
 import { BioModal } from "../BioModal";
+import { useCalendly } from "../../lib/useCalendly";
 
 function DataStreamParticles() {
   return (
@@ -24,6 +25,7 @@ function DataStreamParticles() {
 
 export function Hero() {
   const [bioOpen, setBioOpen] = useState(false);
+  const bookCall = useCalendly();
 
   return (
     <section
@@ -79,13 +81,13 @@ export function Hero() {
 
         <Reveal direction="up" delay={500}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:contact@growbridgedigital.com"
+            <button
+              onClick={bookCall}
               className="inline-flex items-center justify-center text-base px-8 py-6 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-semibold"
             >
               Book Your Free Automation Audit
               <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
+            </button>
             <a
               href="#projects"
               className="inline-flex items-center justify-center text-base px-8 py-6 rounded-xl border border-border hover:border-primary/60 hover:bg-primary/5 transition-colors font-semibold"
@@ -96,7 +98,7 @@ export function Hero() {
         </Reveal>
       </div>
 
-      <BioModal open={bioOpen} onClose={() => setBioOpen(false)} />
+      <BioModal open={bioOpen} onClose={() => setBioOpen(false)} onBookCall={bookCall} />
     </section>
   );
 }

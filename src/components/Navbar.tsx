@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { ImageWithFallback } from "./ImageWithFallback";
+import { useCalendly } from "../lib/useCalendly";
 
 const navItems = [
   { label: "Home", href: "hero" },
@@ -14,6 +15,7 @@ const navItems = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const bookCall = useCalendly();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -55,7 +57,7 @@ export function Navbar() {
         </div>
 
         <button
-          onClick={() => scrollTo("hero")}
+          onClick={bookCall}
           className="hidden md:inline-flex text-sm font-semibold px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
         >
           Book a Call

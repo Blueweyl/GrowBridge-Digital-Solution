@@ -1,12 +1,13 @@
-import { X } from "lucide-react";
+import { X, Phone } from "lucide-react";
 import { ImageWithFallback } from "./ImageWithFallback";
 
 interface BioModalProps {
   open: boolean;
   onClose: () => void;
+  onBookCall: () => void;
 }
 
-export function BioModal({ open, onClose }: BioModalProps) {
+export function BioModal({ open, onClose, onBookCall }: BioModalProps) {
   if (!open) return null;
 
   return (
@@ -41,9 +42,18 @@ export function BioModal({ open, onClose }: BioModalProps) {
         </p>
 
         <div className="flex justify-center gap-3">
+          <button
+            onClick={() => {
+              onClose();
+              onBookCall();
+            }}
+            className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+          >
+            <Phone className="w-4 h-4" /> Book a Call
+          </button>
           <a
             href="mailto:contact@growbridgedigital.com"
-            className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg border border-border hover:border-primary/60 transition-colors"
           >
             Email Us
           </a>
