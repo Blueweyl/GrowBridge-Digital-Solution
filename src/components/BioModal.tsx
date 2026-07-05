@@ -1,0 +1,64 @@
+import { X, Phone } from "lucide-react";
+import { ImageWithFallback } from "./ImageWithFallback";
+
+interface BioModalProps {
+  open: boolean;
+  onClose: () => void;
+  onBookCall: () => void;
+}
+
+export function BioModal({ open, onClose, onBookCall }: BioModalProps) {
+  if (!open) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-background/80 backdrop-blur-sm px-4 animate-fade-in"
+      onClick={onClose}
+    >
+      <div
+        className="relative max-w-sm w-full bento-card glow-border text-center animate-scale-in"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
+          aria-label="Close"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        <ImageWithFallback
+          src="/images/profile/profile-photo.jpg"
+          alt="Vincent De Lara Fitalvero"
+          className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-primary/40"
+        />
+
+        <h3 className="font-display font-bold text-lg mb-1">Vincent De Lara Fitalvero</h3>
+        <p className="text-primary text-sm font-medium mb-4">AI Automation Specialist & GoHighLevel Expert</p>
+        <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+          I help businesses save time and scale faster by building AI-powered automation workflows.
+          Specialized in GoHighLevel, n8n, Zapier, and Make.com — turning complex processes into
+          seamless systems.
+        </p>
+
+        <div className="flex justify-center gap-3">
+          <button
+            onClick={() => {
+              onClose();
+              onBookCall();
+            }}
+            className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+          >
+            <Phone className="w-4 h-4" /> Book a Call
+          </button>
+          <a
+            href="mailto:techvavdf@gmail.com"
+            className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg border border-border hover:border-primary/60 transition-colors"
+          >
+            Email Me
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
